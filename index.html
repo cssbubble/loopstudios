@@ -24,35 +24,35 @@
     <div class="px-5 py-5 header-container bg-cover bg-no-repeat" x-data="{isOpen: false}">
       <div class="lg:max-w-5xl mx-auto ">
         <nav class="flex justify-between items-center mt-10" >
-          <img src="./images/logo.svg" alt="logo" class="cursor-pointer relative z-10">
+          <img src="./images/logo.svg" alt="Loopstudios" class="cursor-pointer relative z-10">
           <!-- mobile navigation  -->
           <div class="md:hidden ">
             <button @click="isOpen = !isOpen">
-              <img src="./images/icon-hamburger.svg" alt="menu" x-show="!isOpen">
-              <img src="./images/icon-close.svg" alt="close" x-show="isOpen" class="relative z-10">
+              <img src="./images/icon-hamburger.svg" alt="menu" x-show="!isOpen" role="button" aria-label="menu">
+              <img src="./images/icon-close.svg" alt="close" x-show="isOpen" class="relative z-10"  role="button" aria-label="close">
             </button>
             <div x-show="isOpen" class="absolute bg-black inset-0 grid justify-items-start items-center px-5 min-h-screen">
               <ul class="text-white grid gap-5 text-4xl" style="font-family: 'Josefin Sans', sans-serif;">
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CAREERS</a></li>
-                <li><a href="#">EVENTS</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">SUPPORT</a></li>
+                <li><a href="#" aria-label="about">ABOUT</a></li>
+                <li><a href="#" aria-label="careers">CAREERS</a></li>
+                <li><a href="#" aria-label="events">EVENTS</a></li>
+                <li><a href="#" aria-label="products">PRODUCTS</a></li>
+                <li><a href="#" aria-label="support">SUPPORT</a></li>
               </ul>
             </div>
           </div>
           <!-- desktop navigation  -->
           <div class="hidden md:flex">
             <ul class="text-gray-200 flex justify-center items-center gap-5" style="font-family: 'Josefin Sans', sans-serif;">
-              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">About</a></li>
-              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Careers</a></li>
-              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Events</a></li>
-              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Products</a></li>
-              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Support</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#" aria-label="about">About</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#" aria-label="careers">Careers</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#" aria-label="events">Events</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#" aria-label="products">Products</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#" aria-label="support">Support</a></li>
             </ul>
           </div>     
         </nav>
-        <div class="grid md:grid-cols-3 my-32">
+        <div class="grid md:grid-cols-3 mt-32 mb-10">
           <div class="border-2 border-white text-white p-8 md:col-span-2">
             <h1 style="font-family: 'Josefin Sans', sans-serif;" class="text-4xl md:text-6xl uppercase tracking-wide">Immersive  experiences <br> that deliver</h1>
           </div>
@@ -160,21 +160,21 @@
     <div class="bg-black w-full max-w-7xl">
       <div class="text-white py-10 px-5 text-center lg:grid lg:grid-cols-2  items-center lg:max-w-5xl lg:mx-auto">
         <div class="lg:flex lg:flex-col lg:items-start">
-          <img src="./images/logo.svg" alt="logo" class="mx-auto lg:mx-0">
+          <img src="./images/logo.svg" alt="Loopstudios" class="mx-auto lg:mx-0">
           <ul class="mt-5 flex flex-col gap-5 lg:flex-row lg:justify-center lg:items-start">
-            <li class="uline px-2 py-2"><a href="#">About</a></li>
-            <li class="uline px-2 py-2"><a href="#">Careers</a></li>
-            <li class="uline px-2 py-2"><a href="#">Events</a></li>
-            <li class="uline px-2 py-2"><a href="#">Products</a></li>
-            <li class="uline px-2 py-2"><a href="#">Support</a></li>
+            <li class="uline px-2 py-2"><a href="#" aria-label="About">About</a></li>
+            <li class="uline px-2 py-2"><a href="#" aria-label="Careers">Careers</a></li>
+            <li class="uline px-2 py-2"><a href="#" aria-label="Events">Events</a></li>
+            <li class="uline px-2 py-2"><a href="#" aria-label="Products">Products</a></li>
+            <li class="uline px-2 py-2"><a href="#" aria-label="Support">Support</a></li>
           </ul>
         </div>
         <div class="lg:flex lg:flex-col lg:items-end">
           <ul class="flex justify-center items-center  mt-10 lg:mt-0">
-            <li class="uline p-2"><a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a></li>
-            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a></li>
-            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a></li>
-            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-instagram.svg" alt="instagram"></a></li>
+            <li class="uline p-2"><a href="#"><img src="./images/icon-facebook.svg" alt="facebook" aria-label="facebook"></a></li>
+            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-twitter.svg" alt="twitter" aria-label="twitter"></a></li>
+            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest" aria-label="pinterest"></a></li>
+            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-instagram.svg" alt="instagram" aria-label="instagram"></a></li>
           </ul>
           <p class="mt-5">© 2021 Loopstudios. All rights reserved.</p>
         </div>
