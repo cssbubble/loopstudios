@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL](https://cssbubble.github.io/loopstudios/)
 
 ## My process
 I first wrote the whole content with basic html elements. I focused more on symantic html style. Then slowly I added more divs, breakpoints, font size, padding, margin etc. whenever required.   
