@@ -19,11 +19,11 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body class="w-full lg:max-w-7xl mx-auto min-h-screen">
-  <header class="w-full h-full relative">
-    <div class="header-container bg-cover bg-center bg-no-repeat px-5 py-10" x-data="{isOpen: false}">
-      <div class="lg:max-w-5xl mx-auto">
-        <nav class="flex justify-between items-center" >
+<body class="w-full lg:max-w-8xl mx-auto min-h-screen">
+  <header class="w-full h-full">
+    <div class="px-5 py-5 header-container bg-cover bg-no-repeat" x-data="{isOpen: false}">
+      <div class="lg:max-w-5xl mx-auto ">
+        <nav class="flex justify-between items-center mt-10" >
           <img src="./images/logo.svg" alt="logo" class="cursor-pointer relative z-10">
           <!-- mobile navigation  -->
           <div class="md:hidden ">
@@ -44,17 +44,17 @@
           <!-- desktop navigation  -->
           <div class="hidden md:flex">
             <ul class="text-gray-200 flex justify-center items-center gap-5" style="font-family: 'Josefin Sans', sans-serif;">
-              <li class="px-3 py-2 hover:text-white"><a href="#">About</a></li>
-              <li class="px-3 py-2 hover:text-white"><a href="#">Careers</a></li>
-              <li class="px-3 py-2 hover:text-white"><a href="#">Events</a></li>
-              <li class="px-3 py-2 hover:text-white"><a href="#">Products</a></li>
-              <li class="px-3 py-2 hover:text-white"><a href="#">Support</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">About</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Careers</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Events</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Products</a></li>
+              <li class="px-2 py-2 hover:text-white font-bold uline"><a href="#">Support</a></li>
             </ul>
           </div>     
         </nav>
-        <div class="md:w-1/2 my-44">
-          <div class="border-2 border-white text-white p-8">
-            <h1 style="font-family: 'Josefin Sans', sans-serif;" class="text-4xl uppercase tracking-wide lg:text-6xl">Immersive  experiences that <br> deliver</h1>
+        <div class="grid md:grid-cols-3 my-32">
+          <div class="border-2 border-white text-white p-8 md:col-span-2">
+            <h1 style="font-family: 'Josefin Sans', sans-serif;" class="text-4xl md:text-6xl uppercase tracking-wide">Immersive  experiences <br> that deliver</h1>
           </div>
         </div>
       </div>
@@ -75,8 +75,8 @@
     <section style="font-family: 'Josefin Sans', sans-serif;" class="px-5 py-10 lg:max-w-5xl lg:mx-auto">
       <div class="lg:flex lg:justify-between lg:items-center">
         <h2 class="text-4xl text-center uppercase text-gray-900 lg:text-left">Our creations</h2>
-        <div class="cursor-pointer hidden lg:inline-block w-60">
-          <div class="border border-black px-3 py-2 w-1/2 mx-auto text-center">
+        <div class="cursor-pointer hidden lg:inline-block w-60 ">
+          <div class="border border-black px-3 py-2 w-1/2 mx-auto text-center hover:text-white hover:bg-black">
             <h3 class="uppercase text-xl font-bold">see all</h3>
           </div>
         </div>
@@ -162,19 +162,19 @@
         <div class="lg:flex lg:flex-col lg:items-start">
           <img src="./images/logo.svg" alt="logo" class="mx-auto lg:mx-0">
           <ul class="mt-5 flex flex-col gap-5 lg:flex-row lg:justify-center lg:items-start">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Support</a></li>
+            <li class="uline px-2 py-2"><a href="#">About</a></li>
+            <li class="uline px-2 py-2"><a href="#">Careers</a></li>
+            <li class="uline px-2 py-2"><a href="#">Events</a></li>
+            <li class="uline px-2 py-2"><a href="#">Products</a></li>
+            <li class="uline px-2 py-2"><a href="#">Support</a></li>
           </ul>
         </div>
         <div class="lg:flex lg:flex-col lg:items-end">
           <ul class="flex justify-center items-center  mt-10 lg:mt-0">
-            <li><a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a></li>
-            <li class="ml-5"><a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a></li>
-            <li class="ml-5"><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a></li>
-            <li class="ml-5"><a href="#"><img src="./images/icon-instagram.svg" alt="instagram"></a></li>
+            <li class="uline p-2"><a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a></li>
+            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a></li>
+            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a></li>
+            <li class="ml-5 uline p-2"><a href="#"><img src="./images/icon-instagram.svg" alt="instagram"></a></li>
           </ul>
           <p class="mt-5">© 2021 Loopstudios. All rights reserved.</p>
         </div>
