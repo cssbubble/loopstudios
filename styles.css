@@ -1,41 +1,52 @@
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+}
 body{
-    width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Alata', sans-serif;
     min-height: 100vh;
 }
+button {
+    all: unset;
+}
+#close-btn, .logo {
+    z-index: 10;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 header {
-    width: 100%;
-    height: 100%;
-}
-.header-container{
-    background-image: url('images/mobile/image-hero.jpg');
-    background-color: plum;
-    background-blend-mode: multiply;
-    padding: 1.5rem;
-    background-size: cover;
+    padding: 3rem 2rem;
+    background-image: url(./images/mobile/image-hero.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    position: relative;
 }
-.header-inner {
 
-}
-nav {
+.navigation {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    margin-top: 2rem;
+    
 }
-#logo-main{
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
+.desktop-nav{
+    display: none;
 }
-#close{
-    position: relative;
-    z-index: 10;
-}
-.mb-navbar {
+#mobile-nav {
+    display: none;
     position: absolute;
     background-color: black;
+    color: white;
     inset: 0;
     display: grid;
     justify-items: start;
@@ -43,181 +54,324 @@ nav {
     padding: 2rem 1rem;
     min-height: 100vh;
 }
-.mb-navbar > ul {
+.mb-nav-inner {
     color: white;
     display: grid;
     gap: 2rem;
-    font-size: 1.75rem;
+    font-size: 1.75rem;    
+
 }
-.desktop-nav {
-    display: none;
-}
-.desktop-nav > ul {
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-.desktop-nav > ul > li{
-    padding: 0.5rem;    
-}
-.tagline {
-    display: grid;
-    padding: 8rem 0;
-    margin: 0 auto;
-}
-.tagline > div {
-    border-width: 2px;
-    border-color: white;
-    color: white;
-    padding: 2rem;
-}
-.tagline h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.first-section {
-    padding: 2.5rem 1.25rem;
-    margin: 4rem auto 0;
-    text-align: center; 
-}
-.first-section img {
-    margin: 0 auto;
-}
-.detail {
-    padding: 0 0.75rem;
-    margin-top: 8rem;
-    background-color: white;
-}
-.detail > h2 {
-    font-size: 2.25rem;
-    text-transform: uppercase;
-    color: rgb(17 24 39);
-    font-family: 'Josefin Sans', sans-serif;
-}
-.detail > p {
-    margin-top: 1.25rem;
-    color: rgb(107 114 128);
-    font-family: 'Alata', sans-serif;
-}
-.second-section {
-    padding: 2.5rem 1.25rem;
-    margin: 4rem auto 0;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.creations >h2 {
-    font-size: 2.25rem;
-    text-align: center;
-    text-transform: uppercase;
-    color:  rgb(17 24 39);
-}
-.creations > div {
+
+.logo{
+    width: auto;
     cursor: pointer;
-    display: none;
 }
-.seeAll{
-    border: 1px solid black;
-    padding: 0.75rem 0.5rem;
-    width: 50%;
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    color: var(--White);
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    font-size: 2.50rem;
+    
+}
+.headline {
+    padding: 10px 20px;
+    border: 2px solid white;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+section, footer{
+    padding: 3rem 2rem;
     text-align: center;
 }
-.seeAll:hover {
-    color: white;
-    background-color: black;
-}
-.seeAll > h3 {
+h2 {
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 100;
+    color: var(--VeryDarkGray);
+}
+p{
+    color: var(--DarkGray);
+}
+.seeall-mb{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.seeall-mb:hover{
+    background-color: var(--Black);
+    color: var(--White);
+}
+.seeall-desktop {
+    display: none;
 }
 .gallery {
     display: grid;
-    gap: 1.5rem;
-    margin-top: 4rem auto 0;
-}
-.picture{
-    position: relative;
-    display: grid;
-    align-items: flex-end;
+    gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     width: 100%;
-    justify-content: center;
-    /* justify-items: center; */
+    justify-items: center;
 }
-.desk-img{
-    display: none;
+h3 {
+    color: var(--White);
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+    text-transform: uppercase;
+    width: 35%;
+    padding-left: 1rem;
+    /* height: 100%; */
+}
+.card {
+    width: 100%;
+    text-align: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+.card:hover {
+    opacity: 50%;
+}
+.deepEarth{
+    background: url(./images/mobile/image-deep-earth.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    
+}
+.nightArcade{
+    background: url(./images/mobile/image-night-arcade.jpg), linear-gradient(to right, gray, white)  ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.soccer {
+    background: url(./images/mobile/image-soccer-team.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.theGrid {
+    background: url(./images/mobile/image-grid.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.fromAbove{
+    background: url(./images/mobile/image-from-above.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.pocket{
+    background: url(./images/mobile/image-pocket-borealis.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.curiosity{
+    background: url(./images/mobile/image-curiosity.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.fisheye{
+    background: url(./images/mobile/image-fisheye.jpg), linear-gradient(to right, gray, white) ;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
-@media (min-width: 1000px) {
-    body {
+footer{
+    background-color: var(--Black);
+    color: var(--White);
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.footerNav{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--White);
+    text-decoration: none;
+}
+.footerNav a{
+    margin-top: 0.25rem;
+    display: inline-block;
+    padding: 10px 15px;
+}
+.footerUl {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.footerUl > li {
+    padding: 10px 8px;
+}
+.uline:hover {
+    background-image: linear-gradient(white, white);
+    background-position: bottom center;
+    background-size: 40% 2px;
+    background-repeat: no-repeat;
+}
+#interactive-mb{
+    width: 100%;
+    height: auto;
+}
+#interactive-desktop{
+    display: none;
+}
+@media (min-width:768px) {
+    body{
         max-width: 80rem;
         margin: 0 auto;
     }
-    .header-container{
-        background-image: url('images/desktop/image-hero.jpg');
-        background-size: contain;
+    header{
+        background-image: url(./images/desktop/image-hero.jpg);
+        background-color: gray;
+        background-blend-mode: multiply;
     }
-    .header-inner{
+    header, section, footer {
         max-width: 70rem;
         margin: 0 auto;
     }
-    .mb-nav-main{
+    #menu-btn {
         display: none;
     }
+    
     .desktop-nav {
+        color: var(--White);
         display: flex;
+        gap: 2rem;
     }
-    .uline:hover {
-        background-image: linear-gradient(white, white);
-        background-position: bottom center;
-        background-size: 40% 2px;
-        background-repeat: no-repeat;
+    .headline {
+        width: 350px;
     }
-    .tagline {
-        padding: 3rem 0;
+    .gallery {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+        justify-items: center;
     }
-    .tagline h1 {
-        font-size: 4rem;
+    .deepEarth{
+        background: url(./images/desktop/image-deep-earth.jpg),linear-gradient(to top, gray, white) ;
+        background-position: center;
+        background-size: cover;
+        /* background-color: linear-gradient(to top, gray, white); */
+        background-blend-mode: multiply;
+        
     }
-    .first-section {
-        max-width: 70rem;
+    .nightArcade{
+        background: url(./images/desktop/image-night-arcade.jpg), linear-gradient(to top, gray, white) ;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .soccer {
+        background: url(./images/desktop/image-soccer-team.jpg), linear-gradient(to top, gray, white);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .theGrid {
+        background: url(./images/desktop/image-grid.jpg), linear-gradient(to top, gray, white);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .fromAbove{
+        background: url(./images/desktop/image-from-above.jpg),linear-gradient(to top, gray, white);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .pocket{
+        background: url(./images/desktop/image-pocket-borealis.jpg), linear-gradient(to top, gray, white);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .curiosity{
+        background: url(./images/desktop/image-curiosity.jpg), linear-gradient(to top, gray, white);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .fisheye{
+        background: url(./images/desktop/image-fisheye.jpg), linear-gradient(to top, gray, white);
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .card {
+        height: 400px;
+        display: flex;
+        align-items: flex-end;
+        /* flex-direction: column; */
+    }
+    h3{
+        width: 50%;
+    }
+    .seeall-mb {
+        display: none;
+    }
+    .gallery-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .seeall-desktop {
+        border: 1px solid black;
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        /* margin-top: 2rem; */
+        cursor: pointer;
+    }
+    .seeall-desktop:hover{
+        background-color: var(--Black);
+        color: var(--White);
+    }
+    #interactive-mb{
+        display: none;
+    }
+    #interactive-desktop{
         display: flex;
     }
-    .detail{
-        margin-left: -9rem;
+    .section-one {
+        display: flex;
+    }
+    .main-para{
+        margin-left: -10rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         text-align: left;
         padding-left: 5rem;
+        background-color: white;
+        margin-top: 8rem;
     }
-    .second-section{
-        max-width: 70rem;  
+    h2{
+        font-size: 2rem;
     }
-    .creations {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
+    .header-container, main, .footer-container {
+        max-width: 65rem;
+        margin: 0 auto;
     }
-    .creations > h2 {
-        text-align: left;
-    }
-    .creations > div {
-        display: inline-block;
-        width: 16rem;
-    }
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0,1fr));
-    }
-    .mb-img {
+    #mobile-nav {
         display: none;
-    }
-    .desk-img {
-        display: inline-block;
     }
 }
