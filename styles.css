@@ -135,6 +135,7 @@ h3 {
     background-size: contain;
     background-repeat: no-repeat;
     height: 100px;
+    cursor: pointer;
 }
 .card:hover {
     opacity: 50%;
@@ -209,15 +210,16 @@ a, a:hover, a:focus, a:active {
     display: inline-block;
     padding: 10px 15px;
 }
-.footerUl {
+.footerIcons {
     margin: 2rem auto;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
 }
-.footerUl > li {
+.footerIcons > li {
     padding: 10px 8px;
+    cursor: pointer;
 }
 .uline:hover {
     background-image: linear-gradient(white, white);
@@ -373,5 +375,30 @@ a, a:hover, a:focus, a:active {
     }
     #mobile-nav {
         display: none;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .footerNav{
+        display: flex;
+        flex-direction: row;
+    }
+    .footerIcons{
+        margin-top: 0;
+        justify-content: right;
+    }
+    .logo{
+        padding: 10px 15px;
+    }
+    .footer-container :first-child{
+        text-align: left;
+    }
+    .footer-container :last-child{
+        text-align: right;
+    }
+    .rights{
+        margin-top: 1.75rem;
+        padding-top: 10px;
     }
 }
